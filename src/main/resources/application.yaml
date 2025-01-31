@@ -1,0 +1,19 @@
+server:
+  port: 8386
+  servlet:
+    context-path: /identity
+
+spring:
+  datasource:
+    url: ${DB_SOURE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+jwt:
+  signerKey: ${SIGN_KEY}
+  valid-duration: 3600 #s
+  refreshable-duration: 360000 #s
